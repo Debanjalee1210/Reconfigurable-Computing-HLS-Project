@@ -1,0 +1,26 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../matrix_mult_ublas_tb.cpp in debug mode
+   Generating csim.exe
+Pattern 0
+Test Passed!
+Pattern 1
+Test Passed!
+Pattern 2
+Test Passed!
+Pattern 3
+Test Passed!
+Pattern 4
+Test Passed!
+Pattern 5
+Test Passed!
+Pattern 6
+Test Passed!
+Pattern 7
+Test Passed!
+Pattern 8
+Test Passed!
+Pattern 9
+Test Passed!
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

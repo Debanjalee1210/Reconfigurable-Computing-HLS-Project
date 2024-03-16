@@ -1,0 +1,192 @@
+<profile>
+  <RunData>
+    <RUN_TYPE>impl</RUN_TYPE>
+    <VIVADO_VERSION>v.2022.1</VIVADO_VERSION>
+    <ROOT_MODULE_CELL>bd_0_i/hls_inst</ROOT_MODULE_CELL>
+  </RunData>
+  <TimingReport>
+    <TargetClockPeriod>10.000</TargetClockPeriod>
+    <AchievedClockPeriod>6.798</AchievedClockPeriod>
+    <CLOCK_NAME>ap_clk</CLOCK_NAME>
+    <CP_FINAL>6.798</CP_FINAL>
+    <CP_ROUTE>6.798</CP_ROUTE>
+    <CP_SYNTH>6.594</CP_SYNTH>
+    <CP_TARGET>10.000</CP_TARGET>
+    <SLACK_FINAL>3.202</SLACK_FINAL>
+    <SLACK_ROUTE>3.202</SLACK_ROUTE>
+    <SLACK_SYNTH>3.406</SLACK_SYNTH>
+    <TIMING_MET>TRUE</TIMING_MET>
+    <TNS_FINAL>0.000</TNS_FINAL>
+    <TNS_ROUTE>0.000</TNS_ROUTE>
+    <TNS_SYNTH>0.000</TNS_SYNTH>
+    <WNS_FINAL>3.202</WNS_FINAL>
+    <WNS_ROUTE>3.202</WNS_ROUTE>
+    <WNS_SYNTH>3.406</WNS_SYNTH>
+  </TimingReport>
+  <AreaReport>
+    <Resources>
+      <BRAM>0</BRAM>
+      <CLB>0</CLB>
+      <DSP>16</DSP>
+      <FF>214</FF>
+      <LATCH>0</LATCH>
+      <LUT>254</LUT>
+      <SLICE>94</SLICE>
+      <SRL>0</SRL>
+      <URAM>0</URAM>
+    </Resources>
+    <AvailableResources>
+      <BRAM>280</BRAM>
+      <CLB>0</CLB>
+      <DSP>220</DSP>
+      <FF>106400</FF>
+      <LUT>53200</LUT>
+      <SLICE>13300</SLICE>
+      <URAM>0</URAM>
+    </AvailableResources>
+  </AreaReport>
+  <RtlModules>
+    <RtlModule CELL="inst" DEPTH="0" IS_TOP="1" TYPE="function" MODULENAME="matrix_mult" DISPNAME="inst" RTLNAME="matrix_mult">
+      <SubModules count="17">flow_control_loop_pipe_U mac_muladd_8ns_8ns_16ns_17_4_1_U10 mac_muladd_8ns_8ns_16ns_17_4_1_U11 mac_muladd_8ns_8ns_16ns_17_4_1_U12 mac_muladd_8ns_8ns_16ns_17_4_1_U13 mac_muladd_8ns_8ns_16ns_17_4_1_U14 mac_muladd_8ns_8ns_16ns_17_4_1_U15 mac_muladd_8ns_8ns_16ns_17_4_1_U16 mac_muladd_8ns_8ns_16ns_17_4_1_U9 mul_8ns_8ns_16_1_1_U1 mul_8ns_8ns_16_1_1_U2 mul_8ns_8ns_16_1_1_U3 mul_8ns_8ns_16_1_1_U4 mul_8ns_8ns_16_1_1_U5 mul_8ns_8ns_16_1_1_U6 mul_8ns_8ns_16_1_1_U7 mul_8ns_8ns_16_1_1_U8</SubModules>
+      <Resources DSP="16" FF="214" LUT="254"/>
+      <LocalResources FF="213" LUT="112"/>
+    </RtlModule>
+    <RtlModule CELL="inst/flow_control_loop_pipe_U" BINDMODULE="matrix_mult_flow_control_loop_pipe" DEPTH="1" TYPE="rtl" MODULENAME="flow_control_loop_pipe" DISPNAME="flow_control_loop_pipe_U" RTLNAME="matrix_mult_flow_control_loop_pipe">
+      <Resources FF="1" LUT="26"/>
+    </RtlModule>
+    <RtlModule CELL="inst/mac_muladd_8ns_8ns_16ns_17_4_1_U10" BINDMODULE="matrix_mult_mac_muladd_8ns_8ns_16ns_17_4_1" DEPTH="1" TYPE="resource" MODULENAME="mac_muladd_8ns_8ns_16ns_17_4_1" DISPNAME="mac_muladd_8ns_8ns_16ns_17_4_1_U10" RTLNAME="matrix_mult_mac_muladd_8ns_8ns_16ns_17_4_1">
+      <Resources DSP="1"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="Row_Col" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_8ns_8ns_16ns_17_4_1_U10" SOURCE="/scratch/kmhatre/AMD_tools/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_base.h:1540" URAM="0" VARIABLE="mul_ln1540_5"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="Row_Col" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_8ns_8ns_16ns_17_4_1_U10" SOURCE="/scratch/kmhatre/AMD_tools/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_base.h:886" URAM="0" VARIABLE="add_ln886_3"/>
+    </RtlModule>
+    <RtlModule CELL="inst/mac_muladd_8ns_8ns_16ns_17_4_1_U11" BINDMODULE="matrix_mult_mac_muladd_8ns_8ns_16ns_17_4_1" DEPTH="1" TYPE="resource" MODULENAME="mac_muladd_8ns_8ns_16ns_17_4_1" DISPNAME="mac_muladd_8ns_8ns_16ns_17_4_1_U11" RTLNAME="matrix_mult_mac_muladd_8ns_8ns_16ns_17_4_1">
+      <Resources DSP="1" LUT="18"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="Row_Col" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_8ns_8ns_16ns_17_4_1_U11" SOURCE="/scratch/kmhatre/AMD_tools/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_base.h:1540" URAM="0" VARIABLE="mul_ln1540_7"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="Row_Col" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_8ns_8ns_16ns_17_4_1_U11" SOURCE="/scratch/kmhatre/AMD_tools/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_base.h:886" URAM="0" VARIABLE="add_ln886_4"/>
+    </RtlModule>
+    <RtlModule CELL="inst/mac_muladd_8ns_8ns_16ns_17_4_1_U12" BINDMODULE="matrix_mult_mac_muladd_8ns_8ns_16ns_17_4_1" DEPTH="1" TYPE="resource" MODULENAME="mac_muladd_8ns_8ns_16ns_17_4_1" DISPNAME="mac_muladd_8ns_8ns_16ns_17_4_1_U12" RTLNAME="matrix_mult_mac_muladd_8ns_8ns_16ns_17_4_1">
+      <Resources DSP="1"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="Row_Col" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_8ns_8ns_16ns_17_4_1_U12" SOURCE="/scratch/kmhatre/AMD_tools/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_base.h:1540" URAM="0" VARIABLE="mul_ln1540_9"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="Row_Col" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_8ns_8ns_16ns_17_4_1_U12" SOURCE="/scratch/kmhatre/AMD_tools/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_base.h:886" URAM="0" VARIABLE="add_ln886_7"/>
+    </RtlModule>
+    <RtlModule CELL="inst/mac_muladd_8ns_8ns_16ns_17_4_1_U13" BINDMODULE="matrix_mult_mac_muladd_8ns_8ns_16ns_17_4_1" DEPTH="1" TYPE="resource" MODULENAME="mac_muladd_8ns_8ns_16ns_17_4_1" DISPNAME="mac_muladd_8ns_8ns_16ns_17_4_1_U13" RTLNAME="matrix_mult_mac_muladd_8ns_8ns_16ns_17_4_1">
+      <Resources DSP="1" LUT="26"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="Row_Col" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_8ns_8ns_16ns_17_4_1_U13" SOURCE="/scratch/kmhatre/AMD_tools/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_base.h:1540" URAM="0" VARIABLE="mul_ln1540_11"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="Row_Col" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_8ns_8ns_16ns_17_4_1_U13" SOURCE="/scratch/kmhatre/AMD_tools/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_base.h:886" URAM="0" VARIABLE="add_ln886_8"/>
+    </RtlModule>
+    <RtlModule CELL="inst/mac_muladd_8ns_8ns_16ns_17_4_1_U14" BINDMODULE="matrix_mult_mac_muladd_8ns_8ns_16ns_17_4_1" DEPTH="1" TYPE="resource" MODULENAME="mac_muladd_8ns_8ns_16ns_17_4_1" DISPNAME="mac_muladd_8ns_8ns_16ns_17_4_1_U14" RTLNAME="matrix_mult_mac_muladd_8ns_8ns_16ns_17_4_1">
+      <Resources DSP="1" LUT="1"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="Row_Col" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_8ns_8ns_16ns_17_4_1_U14" SOURCE="/scratch/kmhatre/AMD_tools/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_base.h:1540" URAM="0" VARIABLE="mul_ln1540_13"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="Row_Col" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_8ns_8ns_16ns_17_4_1_U14" SOURCE="/scratch/kmhatre/AMD_tools/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_base.h:886" URAM="0" VARIABLE="add_ln886_10"/>
+    </RtlModule>
+    <RtlModule CELL="inst/mac_muladd_8ns_8ns_16ns_17_4_1_U15" BINDMODULE="matrix_mult_mac_muladd_8ns_8ns_16ns_17_4_1" DEPTH="1" TYPE="resource" MODULENAME="mac_muladd_8ns_8ns_16ns_17_4_1" DISPNAME="mac_muladd_8ns_8ns_16ns_17_4_1_U15" RTLNAME="matrix_mult_mac_muladd_8ns_8ns_16ns_17_4_1">
+      <Resources DSP="1" LUT="28"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="Row_Col" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_8ns_8ns_16ns_17_4_1_U15" SOURCE="/scratch/kmhatre/AMD_tools/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_base.h:1540" URAM="0" VARIABLE="mul_ln1540_15"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="Row_Col" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_8ns_8ns_16ns_17_4_1_U15" SOURCE="/scratch/kmhatre/AMD_tools/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_base.h:886" URAM="0" VARIABLE="add_ln886_11"/>
+    </RtlModule>
+    <RtlModule CELL="inst/mac_muladd_8ns_8ns_16ns_17_4_1_U16" BINDMODULE="matrix_mult_mac_muladd_8ns_8ns_16ns_17_4_1" DEPTH="1" TYPE="resource" MODULENAME="mac_muladd_8ns_8ns_16ns_17_4_1" DISPNAME="mac_muladd_8ns_8ns_16ns_17_4_1_U16" RTLNAME="matrix_mult_mac_muladd_8ns_8ns_16ns_17_4_1">
+      <Resources DSP="1" LUT="19"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="Row_Col" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_8ns_8ns_16ns_17_4_1_U16" SOURCE="/scratch/kmhatre/AMD_tools/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_base.h:1540" URAM="0" VARIABLE="mul_ln1540"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="Row_Col" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_8ns_8ns_16ns_17_4_1_U16" SOURCE="/scratch/kmhatre/AMD_tools/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_base.h:886" URAM="0" VARIABLE="add_ln886"/>
+    </RtlModule>
+    <RtlModule CELL="inst/mac_muladd_8ns_8ns_16ns_17_4_1_U9" BINDMODULE="matrix_mult_mac_muladd_8ns_8ns_16ns_17_4_1" DEPTH="1" TYPE="resource" MODULENAME="mac_muladd_8ns_8ns_16ns_17_4_1" DISPNAME="mac_muladd_8ns_8ns_16ns_17_4_1_U9" RTLNAME="matrix_mult_mac_muladd_8ns_8ns_16ns_17_4_1">
+      <Resources DSP="1"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="Row_Col" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_8ns_8ns_16ns_17_4_1_U9" SOURCE="/scratch/kmhatre/AMD_tools/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_base.h:1540" URAM="0" VARIABLE="mul_ln1540_3"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="Row_Col" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_8ns_8ns_16ns_17_4_1_U9" SOURCE="/scratch/kmhatre/AMD_tools/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_base.h:886" URAM="0" VARIABLE="add_ln886_1"/>
+    </RtlModule>
+    <RtlModule CELL="inst/mul_8ns_8ns_16_1_1_U1" BINDMODULE="matrix_mult_mul_8ns_8ns_16_1_1" DEPTH="1" TYPE="resource" MODULENAME="mul_8ns_8ns_16_1_1" DISPNAME="mul_8ns_8ns_16_1_1_U1" RTLNAME="matrix_mult_mul_8ns_8ns_16_1_1">
+      <Resources DSP="1"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="Row_Col" OPTYPE="mul" PRAGMA="" RTLNAME="mul_8ns_8ns_16_1_1_U1" SOURCE="/scratch/kmhatre/AMD_tools/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_base.h:1540" URAM="0" VARIABLE="mul_ln1540_2"/>
+    </RtlModule>
+    <RtlModule CELL="inst/mul_8ns_8ns_16_1_1_U2" BINDMODULE="matrix_mult_mul_8ns_8ns_16_1_1" DEPTH="1" TYPE="resource" MODULENAME="mul_8ns_8ns_16_1_1" DISPNAME="mul_8ns_8ns_16_1_1_U2" RTLNAME="matrix_mult_mul_8ns_8ns_16_1_1">
+      <Resources DSP="1"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="Row_Col" OPTYPE="mul" PRAGMA="" RTLNAME="mul_8ns_8ns_16_1_1_U2" SOURCE="/scratch/kmhatre/AMD_tools/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_base.h:1540" URAM="0" VARIABLE="mul_ln1540_4"/>
+    </RtlModule>
+    <RtlModule CELL="inst/mul_8ns_8ns_16_1_1_U3" BINDMODULE="matrix_mult_mul_8ns_8ns_16_1_1" DEPTH="1" TYPE="resource" MODULENAME="mul_8ns_8ns_16_1_1" DISPNAME="mul_8ns_8ns_16_1_1_U3" RTLNAME="matrix_mult_mul_8ns_8ns_16_1_1">
+      <Resources DSP="1" LUT="9"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="Row_Col" OPTYPE="mul" PRAGMA="" RTLNAME="mul_8ns_8ns_16_1_1_U3" SOURCE="/scratch/kmhatre/AMD_tools/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_base.h:1540" URAM="0" VARIABLE="mul_ln1540_6"/>
+    </RtlModule>
+    <RtlModule CELL="inst/mul_8ns_8ns_16_1_1_U4" BINDMODULE="matrix_mult_mul_8ns_8ns_16_1_1" DEPTH="1" TYPE="resource" MODULENAME="mul_8ns_8ns_16_1_1" DISPNAME="mul_8ns_8ns_16_1_1_U4" RTLNAME="matrix_mult_mul_8ns_8ns_16_1_1">
+      <Resources DSP="1" LUT="16"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="Row_Col" OPTYPE="mul" PRAGMA="" RTLNAME="mul_8ns_8ns_16_1_1_U4" SOURCE="/scratch/kmhatre/AMD_tools/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_base.h:1540" URAM="0" VARIABLE="mul_ln1540_8"/>
+    </RtlModule>
+    <RtlModule CELL="inst/mul_8ns_8ns_16_1_1_U5" BINDMODULE="matrix_mult_mul_8ns_8ns_16_1_1" DEPTH="1" TYPE="resource" MODULENAME="mul_8ns_8ns_16_1_1" DISPNAME="mul_8ns_8ns_16_1_1_U5" RTLNAME="matrix_mult_mul_8ns_8ns_16_1_1">
+      <Resources DSP="1" LUT="16"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="Row_Col" OPTYPE="mul" PRAGMA="" RTLNAME="mul_8ns_8ns_16_1_1_U5" SOURCE="/scratch/kmhatre/AMD_tools/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_base.h:1540" URAM="0" VARIABLE="mul_ln1540_10"/>
+    </RtlModule>
+    <RtlModule CELL="inst/mul_8ns_8ns_16_1_1_U6" BINDMODULE="matrix_mult_mul_8ns_8ns_16_1_1" DEPTH="1" TYPE="resource" MODULENAME="mul_8ns_8ns_16_1_1" DISPNAME="mul_8ns_8ns_16_1_1_U6" RTLNAME="matrix_mult_mul_8ns_8ns_16_1_1">
+      <Resources DSP="1" LUT="1"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="Row_Col" OPTYPE="mul" PRAGMA="" RTLNAME="mul_8ns_8ns_16_1_1_U6" SOURCE="/scratch/kmhatre/AMD_tools/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_base.h:1540" URAM="0" VARIABLE="mul_ln1540_12"/>
+    </RtlModule>
+    <RtlModule CELL="inst/mul_8ns_8ns_16_1_1_U7" BINDMODULE="matrix_mult_mul_8ns_8ns_16_1_1" DEPTH="1" TYPE="resource" MODULENAME="mul_8ns_8ns_16_1_1" DISPNAME="mul_8ns_8ns_16_1_1_U7" RTLNAME="matrix_mult_mul_8ns_8ns_16_1_1">
+      <Resources DSP="1" LUT="1"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="Row_Col" OPTYPE="mul" PRAGMA="" RTLNAME="mul_8ns_8ns_16_1_1_U7" SOURCE="/scratch/kmhatre/AMD_tools/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_base.h:1540" URAM="0" VARIABLE="mul_ln1540_14"/>
+    </RtlModule>
+    <RtlModule CELL="inst/mul_8ns_8ns_16_1_1_U8" BINDMODULE="matrix_mult_mul_8ns_8ns_16_1_1" DEPTH="1" TYPE="resource" MODULENAME="mul_8ns_8ns_16_1_1" DISPNAME="mul_8ns_8ns_16_1_1_U8" RTLNAME="matrix_mult_mul_8ns_8ns_16_1_1">
+      <Resources DSP="1" LUT="1"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="Row_Col" OPTYPE="mul" PRAGMA="" RTLNAME="mul_8ns_8ns_16_1_1_U8" SOURCE="/scratch/kmhatre/AMD_tools/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_base.h:1540" URAM="0" VARIABLE="mul_ln1540_1"/>
+    </RtlModule>
+  </RtlModules>
+  <TimingPaths>
+    <TPATH DATAPATH_DELAY="5.013" DATAPATH_LOGIC_DELAY="4.009" DATAPATH_NET_DELAY="1.004" ENDPOINT_PIN="mac_muladd_8ns_8ns_16ns_17_4_1_U9/matrix_mult_mac_muladd_8ns_8ns_16ns_17_4_1_DSP48_0_U/p_reg_reg/C[12]" LOGIC_LEVELS="0" MAX_FANOUT="1" SLACK="3.202" STARTPOINT_PIN="mul_8ns_8ns_16_1_1_U1/dout/CLK">
+      <CELL NAME="mul_8ns_8ns_16_1_1_U1/dout" PRIMITIVE_TYPE="MULT.dsp.DSP48E1" LINE_NUMBER="19"/>
+      <CELL NAME="mac_muladd_8ns_8ns_16ns_17_4_1_U9/matrix_mult_mac_muladd_8ns_8ns_16ns_17_4_1_DSP48_0_U/p_reg_reg" PRIMITIVE_TYPE="MULT.dsp.DSP48E1" LINE_NUMBER="31"/>
+    </TPATH>
+    <TPATH DATAPATH_DELAY="4.939" DATAPATH_LOGIC_DELAY="4.009" DATAPATH_NET_DELAY="0.930" ENDPOINT_PIN="mac_muladd_8ns_8ns_16ns_17_4_1_U10/matrix_mult_mac_muladd_8ns_8ns_16ns_17_4_1_DSP48_0_U/p_reg_reg/C[14]" LOGIC_LEVELS="0" MAX_FANOUT="1" SLACK="3.276" STARTPOINT_PIN="mul_8ns_8ns_16_1_1_U2/dout/CLK">
+      <CELL NAME="mul_8ns_8ns_16_1_1_U2/dout" PRIMITIVE_TYPE="MULT.dsp.DSP48E1" LINE_NUMBER="19"/>
+      <CELL NAME="mac_muladd_8ns_8ns_16ns_17_4_1_U10/matrix_mult_mac_muladd_8ns_8ns_16ns_17_4_1_DSP48_0_U/p_reg_reg" PRIMITIVE_TYPE="MULT.dsp.DSP48E1" LINE_NUMBER="31"/>
+    </TPATH>
+    <TPATH DATAPATH_DELAY="4.939" DATAPATH_LOGIC_DELAY="4.009" DATAPATH_NET_DELAY="0.930" ENDPOINT_PIN="mac_muladd_8ns_8ns_16ns_17_4_1_U10/matrix_mult_mac_muladd_8ns_8ns_16ns_17_4_1_DSP48_0_U/p_reg_reg/C[2]" LOGIC_LEVELS="0" MAX_FANOUT="1" SLACK="3.276" STARTPOINT_PIN="mul_8ns_8ns_16_1_1_U2/dout/CLK">
+      <CELL NAME="mul_8ns_8ns_16_1_1_U2/dout" PRIMITIVE_TYPE="MULT.dsp.DSP48E1" LINE_NUMBER="19"/>
+      <CELL NAME="mac_muladd_8ns_8ns_16ns_17_4_1_U10/matrix_mult_mac_muladd_8ns_8ns_16ns_17_4_1_DSP48_0_U/p_reg_reg" PRIMITIVE_TYPE="MULT.dsp.DSP48E1" LINE_NUMBER="31"/>
+    </TPATH>
+    <TPATH DATAPATH_DELAY="4.937" DATAPATH_LOGIC_DELAY="4.009" DATAPATH_NET_DELAY="0.928" ENDPOINT_PIN="mac_muladd_8ns_8ns_16ns_17_4_1_U10/matrix_mult_mac_muladd_8ns_8ns_16ns_17_4_1_DSP48_0_U/p_reg_reg/C[9]" LOGIC_LEVELS="0" MAX_FANOUT="1" SLACK="3.278" STARTPOINT_PIN="mul_8ns_8ns_16_1_1_U2/dout/CLK">
+      <CELL NAME="mul_8ns_8ns_16_1_1_U2/dout" PRIMITIVE_TYPE="MULT.dsp.DSP48E1" LINE_NUMBER="19"/>
+      <CELL NAME="mac_muladd_8ns_8ns_16ns_17_4_1_U10/matrix_mult_mac_muladd_8ns_8ns_16ns_17_4_1_DSP48_0_U/p_reg_reg" PRIMITIVE_TYPE="MULT.dsp.DSP48E1" LINE_NUMBER="31"/>
+    </TPATH>
+    <TPATH DATAPATH_DELAY="4.936" DATAPATH_LOGIC_DELAY="4.009" DATAPATH_NET_DELAY="0.927" ENDPOINT_PIN="mac_muladd_8ns_8ns_16ns_17_4_1_U10/matrix_mult_mac_muladd_8ns_8ns_16ns_17_4_1_DSP48_0_U/p_reg_reg/C[0]" LOGIC_LEVELS="0" MAX_FANOUT="1" SLACK="3.279" STARTPOINT_PIN="mul_8ns_8ns_16_1_1_U2/dout/CLK">
+      <CELL NAME="mul_8ns_8ns_16_1_1_U2/dout" PRIMITIVE_TYPE="MULT.dsp.DSP48E1" LINE_NUMBER="19"/>
+      <CELL NAME="mac_muladd_8ns_8ns_16ns_17_4_1_U10/matrix_mult_mac_muladd_8ns_8ns_16ns_17_4_1_DSP48_0_U/p_reg_reg" PRIMITIVE_TYPE="MULT.dsp.DSP48E1" LINE_NUMBER="31"/>
+    </TPATH>
+  </TimingPaths>
+  <VivadoReportFiles>
+    <ReportFile TYPE="design_analysis" PATH="verilog/report/matrix_mult_design_analysis_routed.rpt"/>
+    <ReportFile TYPE="failfast" PATH="verilog/report/matrix_mult_failfast_routed.rpt"/>
+    <ReportFile TYPE="status" PATH="verilog/report/matrix_mult_status_routed.rpt"/>
+    <ReportFile TYPE="timing" PATH="verilog/report/matrix_mult_timing_routed.rpt"/>
+    <ReportFile TYPE="timing_paths" PATH="verilog/report/matrix_mult_timing_paths_routed.rpt"/>
+    <ReportFile TYPE="utilization" PATH="verilog/report/matrix_mult_utilization_routed.rpt"/>
+    <ReportFile TYPE="utilization_hierarchical" PATH="verilog/report/matrix_mult_utilization_hierarchical_routed.rpt"/>
+  </VivadoReportFiles>
+  <GeneralInfo NAME="General Information">
+    <item NAME="Date" VALUE="Sat Mar 02 22:03:24 MST 2024"/>
+    <item NAME="Version" VALUE="2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)"/>
+    <item NAME="Project" VALUE="hls_gemm_p2"/>
+    <item NAME="Solution" VALUE="solution1 (Vivado IP Flow Target)"/>
+    <item NAME="Product family" VALUE="zynq"/>
+    <item NAME="Target device" VALUE="xc7z020-clg400-1"/>
+  </GeneralInfo>
+  <RunOptions NAME="Run Constraints &amp; Options">
+    <General NAME="Design Constraints &amp; Options">
+      <item NAME="Place &amp; Route target clock" VALUE="10 ns"/>
+      <item NAME="C-Synthesis target clock" VALUE="10 ns"/>
+      <item NAME="C-Synthesis uncertainty" VALUE="27%"/>
+      <item NAME="config_export -ip_xdc_file" VALUE=""/>
+      <item NAME="config_export -ip_xdc_ooc_file" VALUE=""/>
+    </General>
+    <Syn NAME="RTL Synthesis Options">
+      <item NAME="config_export -vivado_synth_strategy" VALUE="default"/>
+      <item NAME="config_export -vivado_synth_design_args" VALUE="-directive sdx_optimization_effort_high"/>
+    </Syn>
+    <Impl NAME="Place &amp; Route Options">
+      <item NAME="config_export -vivado_impl_strategy" VALUE="default"/>
+      <item NAME="config_export -vivado_phys_opt" VALUE="none"/>
+      <item NAME="config_export -vivado_pblock" VALUE=""/>
+    </Impl>
+    <Reporting NAME="Reporting Options">
+      <item NAME="config_export -vivado_report_level" VALUE="2"/>
+      <item NAME="config_export -vivado_max_timing_paths" VALUE="10"/>
+    </Reporting>
+  </RunOptions>
+</profile>
+
